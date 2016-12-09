@@ -36,16 +36,15 @@
       <div id="pun"></div>
       <button id="next">Next Pun</button>
     <script>
+      function getRandomInt(min, max) {return Math.floor(Math.random() * (max - min + 1)) + min;}
       var puns;
-      var punid = 0;
       
       $.get("puns.txt", function (data) {
         puns = data.split('###');
       });
       
       $("#next").click(function() {
-        $("#pun").text(puns[punid]);
-        punid++;
+        $("#pun").text(puns[getRandomInt(1, puns.length]);
       });
     </script>
   </body>
