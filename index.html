@@ -32,5 +32,18 @@
       <div id="pun"></div>
       <button id="next">Next Pun</button>
     </div>
+    <script>
+      var puns;
+      var punid = 0;
+      
+      $.get("puns.txt", function (data) {
+        puns = data.split('\n');
+      });
+      
+      $("#next").click(function() {
+        $("#pun").text(puns[punid]);
+        punid++;
+      });
+    </script>
   </body>
 </html>
