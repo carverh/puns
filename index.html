@@ -40,7 +40,7 @@
       var punid = 0;
       
       $.get("puns.txt", function (data) {
-        puns = data.split('\n');
+        puns = data.split('###');
       });
       
       $("#next").click(function() {
