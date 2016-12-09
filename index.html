@@ -9,7 +9,8 @@
         font-weight: 100;
       }
       
-      .container {
+      #pun {
+        font-size: 28pt;
         margin: auto;
         position: absolute;
         top: 50%;
@@ -18,23 +19,20 @@
         transform: translate(-50%, -50%);
       }
       
-      #pun {
-        font-size: 28pt;
-      }
-      
       #next {
         font-size: 20pt;
+        margin: auto;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0%);
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   </head>
   <body>
-    <div class="container">
       <div id="pun"></div>
-    </div>
-    <div class="container">
       <button id="next">Next Pun</button>
-    </div>
     <script>
       var puns;
       var punid = 0;
